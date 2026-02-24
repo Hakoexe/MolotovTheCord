@@ -221,10 +221,11 @@ This approach does violate the terms, but it still keeps the automation within D
 5. set the **Delete Interval** to `2500`ms
 6. Click `Start`
 > This can take some time to be completed depending on how large the JSON file is.
-
-> **Note: If you select one DM and find that DM in discord you can watch in real time the messages being deleted.**
+> ⚠️ Note: This can only be done one at a time. You can not open up two browser tabs to do this at the same time.
+> ** If you select one DM during your JSON file setup and find that DM in discord you can watch in real time the messages being deleted.**
 
 7. Once this is completed you can repeat Steps 1-6 to complete for **SERVER_MESSAGES_ALL.json**
+> ⚠️ Note: This can only be done one at a time. You can not open up two browser tabs to do this at the same time.
 
 ---
 
@@ -242,5 +243,4 @@ Wait **30 days**, then request your data again to confirm deletion success.
 
 This repository is provided for **educational purposes only**. Use responsibly.
 Link to orginal source: https://codeberg.org/discorch/discorch
-
 
