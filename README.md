@@ -38,7 +38,7 @@ By using this repository, you acknowledge that you understand these risks and ag
 5. Confirm the request
 
 ![7997b816-8583-4aba-89e9-61d6c17536c2](https://github.com/user-attachments/assets/0f841d88-7396-4c20-84e8-c6dfaf5588e4)
-
+>Source: Discord
 ---
 
 ## 2️⃣ Wait
