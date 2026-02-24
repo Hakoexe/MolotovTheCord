@@ -44,8 +44,9 @@ By using this repository, you acknowledge that you understand these risks and ag
 ## 2️⃣ Wait
 
 The data request can take **up to 30 days**.  
-You will receive an email when your data package is ready.
-
+Discord will send a download link to the email address linked to your account when you made the request
+Your request will be canceled if you disable or delete your account before receiving the download link.
+> NOTE: Your Discord account must be verified with an email address before requesting your data. Having trouble accessing your account? Contact privacy@discord.com for help with your data request.
 ---
 
 ## 3️⃣ Extract Your Data
@@ -70,7 +71,7 @@ Your extracted structure should look like:
 
 ## 4️⃣ Use Discorch 
 
-Go to: [discorch](https://discorch.org/)
+Go to: [Discorch](https://discorch.org/)
 
 Discorch works **entirely offline**, does **not submit your data**, and helps you:
 
