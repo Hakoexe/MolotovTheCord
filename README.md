@@ -9,14 +9,17 @@
 
 ## ⚠️ Important Disclaimer
 
-This repository is a **guide** on reviewing and deleting your Discord data.  
+This repository is provided strictly for **educational and informational purposes only**.  
+It explains how users can review and delete their own Discord data.
 
-- This is **not a bot**.  
-- Some automation methods **may violate Discord's Terms of Service**.  
-- You assume all risk if you use automation.  
-- Data deletion is **permanent**.  
+- This project is **not a bot**
+- The information presented here is **not intended to encourage, promote, or facilitate the circumvention of Discord's Terms of Service or any platform rules**.
+- Certain automation methods discussed may violate Discord's Terms of Service. You are solely responsible for ensuring your actions comply with all applicable rules and policies.
+- I, the author does **not endorse, support, or take responsibility** for misuse of the information provided.
+- Any actions you take are done **at your own risk**.
+- Data deletion is **permanent and irreversible**.
 
-Use responsibly.
+By using this repository, you acknowledge that you understand these risks and agree to use the information responsibly and in compliance with Discord's Terms of Service.
 
 ---
 
@@ -24,17 +27,15 @@ Use responsibly.
 
 ## 1️⃣ Request Your Data From Discord
 
-Before deleting anything, request your full Discord data package.
-
 📘 Official guide: ["Requesting a Copy of Your Data"](https://support.discord.com/hc/en-us/articles/360004027692-Requesting-a-Copy-of-your-Data)
 
 **Steps (Desktop / Browser):**
 
 1. Open **Discord**
-2. Go to **User Settings > Privacy & Safety**
-3. Click **Request Data**
-4. Confirm the request
-
+2. Go to `User Settings > Data & Privacy`
+3. Click `Request Data`
+4. Select `Messages`
+5. Confirm the request
 
 ![7997b816-8583-4aba-89e9-61d6c17536c2](https://github.com/user-attachments/assets/0f841d88-7396-4c20-84e8-c6dfaf5588e4)
 
@@ -49,23 +50,27 @@ You will receive an email when your data package is ready.
 
 ## 3️⃣ Extract Your Data
 
-1. Download the ZIP file from Discord
+1. Download the ZIP file from the email from Discord
 2. Extract it
 3. Locate the `messages` folder
 
 Your extracted structure should look like:
-discord_data/
-├── account/
-├── messages/
-├── servers/
-└── index.html
 
+`discord_data/`
+
+`├── account/`
+
+`├── messages/`
+
+`├── servers/`
+
+`└── index.html`
 
 ---
 
-## 4️⃣ Use Discorch
+## 4️⃣ Use Discorch 
 
-Go to: [https://discorch.org/](https://discorch.org/)
+Go to: [discorch](https://discorch.org/)
 
 Discorch works **entirely offline**, does **not submit your data**, and helps you:
 
@@ -81,36 +86,43 @@ Discorch works **entirely offline**, does **not submit your data**, and helps yo
 You can choose between:
 
 - **A. Play It Safe** – Fully ToS compliant  
+   Follow Discord's Terms. Only delete messages from servers and group chats you can no longer access. 
 - **B. Live on the Edge** – Automation, violates ToS
-
+   Understand the risks. Automate deleteion of 1:1 DMs against Discord's terms.
+  
 ---
 
-# 🅰️ Play It Safe (ToS Compliant)
+## 🅰️ Play It Safe (ToS Compliant)
 
-1. Go to [https://discorch.org/](https://discorch.org/)  
+1. Go to [Discorch](https://discorch.org/)  
 2. Select **Play It Safe**
 3. Leave **Show 1:1 DMs and servers you still access** unchecked
-4. Click **Select Message Folder** and choose the extracted `messages` folder
-5. Upload the folder
+4. Click `Select Message Folder` and choose the extracted **messages** folder
+5. A pop-up will come up - Click on `Upload`
 
-Channels may appear as:
-Unknown Channel in X
+> Channels will appear as: Unknown Channel in Server or Group DMs 
 
+6. Select all channels you wish to be deleted 
+7. Click `Export` > 
+8. Click `Request Data Deletion`  
 
-6. Click **Export > Request Data Deletion**  
+**Discorch will guide you to submit a Discord support ticket**
 
-Discorch will guide you to submit a Discord support ticket.
 Before submitting as a reminder
 Ensure:
 - ✅ Attach the **CSV file** (not JSON)  
 - ✅ Complete all form fields  
-- ✅ Email address is correct  
+- ✅ Email address is correct
+
+> After submitting your request, you'll receive updates about its status via email from Discord's privacy team.
 
 ---
 
-Discord will likely reply with "This channel is reserved for individuals..." You'll need to use the template below to get your request reviewed properly.
+**Discord's Reply Process**
+Discord will likely reply with "This channel is reserved for individuals..." You'll need to use the template below to get your request reviewed properly
 
-### Response Template
+ **Response Template**
+ ```
 Dear Privacy Team,
 
 I believe there may have been a misunderstanding regarding my bulk message deletion request submitted through the official privacy form. This is a legitimate privacy request submitted via the correct channel.
@@ -125,110 +137,104 @@ Thank you for your time and assistance.
 
 Best regards,
 [Your Name]
+```
 
+After this step, continue to 5B for 1:1 DM deletion.
 
-> After this step, continue to 5B for 1:1 DM deletion.  
-> Discord does **NOT** delete 1:1 DMs via privacy requests.
+Discord does **NOT** delete 1:1 DMs via privacy requests.
 
 ---
 
-# 🅱️ Live on the Edge (Automation)
+## 🅱️ Live on the Edge (Automation)
 
-⚠️ This violates Discord’s Terms of Service. Proceed at your own risk.  
+## How this works:
+This method hooks into Discord's web client and uses the exact same deletion code that runs when you manually press delete on a message. It respects Discord's rate limits and does not access your authentication token directly.
+While this violates Discord's terms of service, we have not observed any account restrictions in practice. This is considered the safest automation method available, but use your own judgement.
+Requires installing browser extensions and userscripts. The setup process is guided in the next steps.
+This approach does violate the terms, but it still keeps the automation within Discord's own client code. We have not observed any account restrictions in practice, but use your own judgement when proceeding with this flow.
 
-- Uses Discord’s web client code
-- Respects rate limits
-- No direct access to your authentication token
-- No account restrictions observed in practice — still risky
-
+> Note: No account restrictions observed in practice
+ 
 ---
 
 ## Setup
 
-1. Install **Brave Browser**
-2. Open [https://discorch.org/](https://discorch.org/) in Brave
+1. Install [Brave Browser](https://brave.com/download/)
+2. Open [Discorch](https://discorch.org/) in Brave
 3. Select **Live on the Edge**
-4. Toggle:
-   - Enable **Include servers and group chats**  
-   - Disable if only deleting 1:1 DMs
-5. Click **I understand the risk**
+4. Toggle off `include server and group chats` 
+>We will use filters to select DMs/Group Dms and Servers
+5. Click `I understand the risk`
 
 ## Install Extensions & Scripts
 
 1. **Violentmonkey**: [Chrome Web Store](https://chrome.google.com/webstore/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag)  
 2. **Vencord Userscript**: [Raw GitHub Link](https://raw.githubusercontent.com/Vencord/builds/main/Vencord.user.js)  
 3. **DiscorchDeleter Userscript**: [GitHub Release](https://github.com/Darker-Ink/DiscorchDeleter/releases/download/v1.1.0/discorchdeleter.user.js)  
-
-> once all of these have been installed on the Brave Browser, go ahead and open a new tab in the brave browser and log in to [Discord](https://discord.com/).
-> You must use Discord in a brave web browser for this to work!!
+4. Click `Select Message Folder` and choose the extracted **messages** folder
+5. A pop-up will come up - Click on `Upload`
 
 ---
 
-# Deleting 1:1 DMs & Group DMs
+## Deleting 1:1 DMs & Group DMs
 
-1. Upload your `messages` folder
-2. Apply **Filters**:
+1. In the top right Click `Filters Active`
    - DirectMessage
    - Group DM
-3. Select all conversations you want to delete
-4. Click **Export > Export for DiscorchDeleter**
-5. Leave:
-   - ❌ Include full message content unchecked 
-   - ❌ Include attachments unchecked
-6. Click **Download JSON**
-7. Rename file to: DMS_AND_GROUP_DMS_ALL.json
-
+2. Select all channels you want to delete
+3. Click  `Export` > `Export for DiscorchDeleter`
+4. Leave unchecked:
+   - ❌ Include full message content and attachments
+> Only select this if you are trying to archive your messages, as selecting this will not work in discorch
+5. Click `Download JSON for DiscorchDeleter`
+6. Rename file to: DMS_AND_GROUP_DMS_ALL.json
 
 ---
 
-# Deleting Server Messages
+## Deleting Server Messages
 
-1. Clear filters
-2. Select channel types:
+1. In the top right Click `Filters Active`
    - Text Channel
    - Announcement Channel
    - Public Thread
    - Voice Channel
    - Announcement Thread
-3. Optionally: Only show messages from servers you’ve left
-4. Select messages
-5. Click **Export > Export for DiscorchDeleter**
-6.  Leave:
-   - ❌ Include full message content unchecked 
-   - ❌ Include attachments unchecked
-7. Download JSON
-8. Rename to: SERVER_MESSAGES_ALL.json
-
+2. Select all channels you want to delete
+3. Click  `Export` > `Export for DiscorchDeleter`
+4. Leave unchecked:
+   - ❌ Include full message content and attachments
+> Only select this if you are trying to archive your messages, as selecting this will not work in discorch
+5. Click `Download JSON for DiscorchDeleter`
+6. Rename to: SERVER_MESSAGES_ALL.json
 
 ---
+## 🔥 Using DiscorchDeleter
 
-# Running the Scripts
+1. In Brave open a new tab and log into [Discord](https://discord.com/).
+> You must use Discord in a brave web browser for this to work!!
+2. Once logged in you should see DiscorchDeleter 
+> you can move this window around in discord and adjust the size
+<img width="710" height="754" alt="image" src="https://github.com/user-attachments/assets/9f29b08d-2c57-48be-8a36-f8c534d69d77" />
 
-- Run one JSON file at a time
-- Expect processing time due to rate limits
-- Errors may appear for servers you no longer have access to
-- Use Play It Safe method as backup for missing messages
+3. Click on `File`
+4. Select the **DMS_AND_GROUP_DMS_ALL.json**
+5. set the **Delete Interval** to `2500`ms
+6. Click `Start`
+> This can take some time to be completed depending on how large the JSON file is.
+
+> **Note: If you select one DM and find that DM in discord you can watch in real time the messages being deleted.**
+
+7. Once this is completed you can repeat Steps 1-6 to complete for **SERVER_MESSAGES_ALL.json**
 
 ---
 
 # ✅ Final Step: Sanity Check
 
 After:
-
 - Running automation
 - Submitting privacy requests
 
 Wait **30 days**, then request your data again to confirm deletion success.
-
----
-
-# 🧨 Recommended Approach
-
-For maximum coverage:
-
-1. Submit Privacy Request (5A)  
-2. Run Automation for 1:1 DMs (5B)  
-3. Re-request data after 30 days
 
 ---
 
